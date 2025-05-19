@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div>
-      {token == "" ?
+      {token === "" ?
         <Box>
           <Toaster />
           <Layout />

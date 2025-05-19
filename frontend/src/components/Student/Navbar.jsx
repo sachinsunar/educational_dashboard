@@ -1,11 +1,15 @@
 import { Avatar, Box, Group, Text } from '@mantine/core'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
 
+    const navigate = useNavigate();
+
+
     const logout = () => {
         localStorage.removeItem('token');
+        navigate("/login")
     };
 
     return (
@@ -16,7 +20,7 @@ const Navbar = () => {
             </Box>
             <nav className='flex flex-col gap-4 text-xl font-light sm:pb-10 sm:mb-30 ' >
 
-                <NavLink to='/home' className='flex items-center px-3 py-2' >
+                <NavLink to='/dashboard' className='flex items-center px-3 py-2' >
                     <i className="fa-solid fa-house sm:pr-3"></i>
                     <p className='text-[18px] xl:text-xl hidden md:block'>Home</p>
                 </NavLink>

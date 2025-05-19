@@ -27,7 +27,6 @@ const SignUp = () => {
         event.preventDefault();
         try {
             const res = await axios.post(backendUrl + "/auth/signup", { name, email, password });
-            console.log("<><><>>", res.data);
             if (res.data.success) {
                 toast.success(res.data.message);
                 navigate('/login')
