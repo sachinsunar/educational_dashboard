@@ -1,7 +1,7 @@
 import React from 'react'
-import course1 from '../assets/img/course1.png'
-import course2 from '../assets/img/course2.png'
-import course3 from '../assets/img/course3.png'
+import course1 from '../../assets/img/course1.png'
+import course2 from '../../assets/img/course2.png'
+import course3 from '../../assets/img/course3.png'
 import CourseCard from './CourseCard'
 import { Box } from '@mantine/core'
 

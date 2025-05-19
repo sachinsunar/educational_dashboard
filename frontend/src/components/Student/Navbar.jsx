@@ -4,6 +4,10 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
 
+    const logout = () => {
+        localStorage.removeItem('token');
+    };
+
     return (
         <Box className='fixed w-[15%] md:w-[30%] lg:w-[27%] xl:w-[18%]    flex flex-col gap-10   text-black  min-h-[91.5vh]  py-4  sm:my-10 sm:px-5  lg:px-10 px-2 sm:justify-between sm:items-start items-center  ' >
             <Box className='flex  lg:text-3xl md:text-xl sm:text-lg font-bold'>
@@ -52,14 +56,14 @@ const Navbar = () => {
                         <Avatar
                             src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"
                             radius="xl"
-                            className='flex !items-center'
+                            className='flex !items-center cursor-pointer'
                         />
 
                         <Box>
-                            <Text size="lg" fw={700} className='hidden md:block'>
+                            <Text size="lg" fw={700} className='hidden md:block cursor-pointer'>
                                 Sachin Sunar
                             </Text>
-                            <Text c="dimmed" size="sm" className='hidden md:block'>
+                            <Text c="dimmed" size="sm" className='hidden md:block cursor-pointer'>
                                 Premium plan
                             </Text>
                         </Box>
@@ -67,9 +71,9 @@ const Navbar = () => {
                     </Group>
                 </Box>
 
-                <Box className='flex items-center mt-2 sm:pl-4'>
-                    <i className="fa-solid fa-right-from-bracket sm:pr-4 text-2xl"></i>
-                    <p className='text-[18px] lg:text-xl font-semibold hidden md:block '>Logout</p>
+                <Box onClick={logout} className='flex items-center mt-2 sm:pl-4'>
+                    <i className="fa-solid fa-right-from-bracket sm:pr-4 text-2xl cursor-pointer"></i>
+                    <p className='text-[18px] lg:text-xl font-semibold hidden md:block cursor-pointer'>Logout</p>
                 </Box>
             </Box>
         </Box >

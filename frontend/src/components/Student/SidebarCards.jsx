@@ -1,5 +1,5 @@
 import React from 'react'
-import sideimg from '../assets/img/sidebar.png'
+import sideimg from '../../assets/img/sidebar.png'
 import { DonutChart } from '@mantine/charts';
 import '@mantine/core/styles.css';
 import { Box, MantineProvider } from '@mantine/core';

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Activity from '../components/Activity'
-import Teachers from '../components/Teachers'
-import Courses from '../components/Courses'
-import HomeMenu from '../components/HomeMenu'
+import Activity from '../../components/Student/Activity'
+import Teachers from '../../components/Student/Teachers'
+import Courses from '../../components/Student/Courses'
+import HomeMenu from '../../components/Student/HomeMenu'
 import { Box } from '@mantine/core'
 
 const Home = () => {
